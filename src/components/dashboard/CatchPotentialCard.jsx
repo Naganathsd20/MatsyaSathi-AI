@@ -28,14 +28,14 @@ export const CatchPotentialCard = ({ catchData }) => {
           <p className="text-xs text-slate-400 mt-0.5">Estimated catch yield range for today's morning voyage.</p>
         </div>
 
-        {/* Phase 5 Disclaimer Note */}
+        {/* Phase 5 Active Note */}
         <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 space-y-1 my-2">
-          <div className="flex items-center gap-1.5 text-amber-400 font-semibold text-[11px]">
+          <div className="flex items-center gap-1.5 text-cyan-400 font-semibold text-[11px]">
             <Info className="w-3.5 h-3.5 shrink-0" />
-            <span>Phase 5 Roadmap Note</span>
+            <span>Phase 5 Catch Potential Active</span>
           </div>
           <p className="text-[11px] text-slate-400 leading-snug">
-            "{catchData.disclaimer}"
+            Prototype catch prediction based on Zone A sea state, depth, and environmental factors.
           </p>
         </div>
       </div>
