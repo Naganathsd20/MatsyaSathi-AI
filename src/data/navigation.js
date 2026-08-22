@@ -87,8 +87,8 @@ export const navItems = [
     name: 'Settings',
     path: '/settings',
     icon: Settings,
-    phase: 'Phase 1 Shell',
-    isFunctional: false,
-    description: 'Language selection (Kannada, Malayalam, Tamil, Hindi, English), offline sync, and vessel profile.'
+    phase: 'Phase 11',
+    isFunctional: true,
+    description: 'Language selection (Kannada, Malayalam, Tamil, Hindi, English), offline map tile cache, vessel registration profile, and alert thresholds.'
   }
 ];
