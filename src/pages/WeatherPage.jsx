@@ -1,22 +1,44 @@
 import React from 'react';
-import PlaceholderPage from './PlaceholderPage';
-import { CloudSun } from 'lucide-react';
+import { weatherData } from '../data/weatherData';
+
+import WeatherHeader from '../components/weather/WeatherHeader';
+import CurrentWeatherGrid from '../components/weather/CurrentWeatherGrid';
+import SeaConditionIndexCard from '../components/weather/SeaConditionIndexCard';
+import FishingWindowCard from '../components/weather/FishingWindowCard';
+import WeatherForecastGrid from '../components/weather/WeatherForecastGrid';
+import WindWaveDetailsCard from '../components/weather/WindWaveDetailsCard';
+import ConditionTrendCard from '../components/weather/ConditionTrendCard';
+import WeatherInsightCard from '../components/weather/WeatherInsightCard';
 
 export const WeatherPage = () => {
+  const w = weatherData;
+
   return (
-    <PlaceholderPage
-      title="Weather & Sea Intelligence"
-      subtitle="Real-time ocean state advisories, wave heights, wind direction, tide schedules, and cyclone advisories."
-      icon={CloudSun}
-      phaseTag="Coming in Phase 2"
-      roadmapPhase="Phase 2"
-      plannedFeatures={[
-        "Coastal wind speed & gust direction forecasts",
-        "Wave swell height & sea surface roughness telemetry",
-        "Astronomical tide schedules for regional harbors",
-        "Extreme storm & cyclone push notification warnings"
-      ]}
-    />
+    <div className="space-y-6 pb-8">
+      {/* 1. Page Header */}
+      <WeatherHeader headerData={w.header} />
+
+      {/* 2. Current Conditions Grid (6 Metrics) */}
+      <CurrentWeatherGrid currentData={w.current} />
+
+      {/* 3. Sea Condition Index & Fishing Guidance Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <SeaConditionIndexCard seaIndex={w.seaConditionIndex} />
+        <FishingWindowCard fishingCondition={w.fishingCondition} />
+      </div>
+
+      {/* 4. Weather Forecast (3-Day Grid) */}
+      <WeatherForecastGrid forecast={w.forecast} />
+
+      {/* 5. Wind & Wave Hydrodynamic Parameters */}
+      <WindWaveDetailsCard marineDetails={w.windWaveDetails} />
+
+      {/* 6. Next 12 Hours Condition Trend */}
+      <ConditionTrendCard hourlyTrend={w.hourlyTrend} />
+
+      {/* 7. MatsyaSathi Weather Insight Card */}
+      <WeatherInsightCard aiInsight={w.aiInsight} />
+    </div>
   );
 };
 

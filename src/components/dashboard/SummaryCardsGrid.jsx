@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Waves, CloudSun, ShieldCheck, Clock, Info } from 'lucide-react';
 
 export const SummaryCardsGrid = ({ summaryData }) => {
@@ -62,6 +63,11 @@ export const SummaryCardsGrid = ({ summaryData }) => {
           <div className="flex justify-between text-slate-300">
             <span className="text-slate-400">Visibility:</span>
             <span className="font-semibold text-slate-200">Good (8.5 NM)</span>
+          </div>
+          <div className="pt-1.5 mt-1 border-t border-slate-800/60">
+            <Link to="/weather" className="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1">
+              <span>View Weather & Sea →</span>
+            </Link>
           </div>
         </div>
       </div>
