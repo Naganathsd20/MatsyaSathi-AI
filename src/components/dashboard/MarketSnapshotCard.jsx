@@ -45,7 +45,7 @@ export const MarketSnapshotCard = ({ marketData }) => {
           to="/market"
           className="inline-flex items-center text-xs font-semibold text-cyan-400 hover:text-cyan-300 gap-1.5 transition-all"
         >
-          <span>View Market</span>
+          <span>View Market & Supply Chain</span>
           <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>
