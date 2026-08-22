@@ -80,7 +80,7 @@ export const navItems = [
     path: '/ai-assistant',
     icon: Bot,
     phase: 'Phase 10',
-    isFunctional: false,
+    isFunctional: true,
     description: 'Multilingual voice & text AI companion for sea regulations, gear advice, and weather queries.'
   },
   {
