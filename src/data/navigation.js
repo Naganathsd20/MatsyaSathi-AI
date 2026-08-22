@@ -72,7 +72,7 @@ export const navItems = [
     path: '/community',
     icon: Users,
     phase: 'Phase 9',
-    isFunctional: false,
+    isFunctional: true,
     description: 'Fishermen peer knowledge exchange, regional safety updates, and sustainable fishing practices.'
   },
   {
