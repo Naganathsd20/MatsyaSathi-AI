@@ -47,9 +47,10 @@ export const ZoneRecommendationCard = ({ zones }) => {
       {/* Grid of 3 Zone Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {zones.map((zone) => (
-          <div
+          <Link
             key={zone.id}
-            className={`p-4 rounded-2xl bg-slate-900/80 border ${borderStyles[zone.badgeType] || borderStyles.success} transition-all duration-200 flex flex-col justify-between`}
+            to="/zones"
+            className={`p-4 rounded-2xl bg-slate-900/80 border ${borderStyles[zone.badgeType] || borderStyles.success} transition-all duration-200 flex flex-col justify-between hover:scale-[1.01] block cursor-pointer`}
           >
             <div>
               <div className="flex items-center justify-between gap-2 mb-3">
@@ -84,9 +85,9 @@ export const ZoneRecommendationCard = ({ zones }) => {
 
             <div className="mt-3 pt-2.5 border-t border-slate-800/80 flex items-center justify-between text-[11px] text-slate-400">
               <span>Depth: {zone.depth}</span>
-              <span className="text-[10px] text-slate-500 uppercase tracking-wide">Demo Data</span>
+              <span className="text-[10px] text-cyan-400 font-semibold flex items-center gap-1">Details →</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
