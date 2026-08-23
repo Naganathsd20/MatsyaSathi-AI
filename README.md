@@ -454,3 +454,22 @@ MatsyaSathi-AI/
 ├── package-lock.json
 ├── vite.config.js
 └── README.md
+
+
+---
+
+# 👥 Team
+
+## Team Technosphere
+
+**Project:** MatsyaSathi AI
+
+**Tagline:**  
+*Safer Seas. Smarter Fishing. Better Livelihoods.*
+
+Built with the vision of using AI for **social impact, safety, inclusion and livelihood empowerment** of India's coastal fishing communities.
+
+---
+
+### 🌊 MatsyaSathi AI
+### Built by **Team Technosphere**
