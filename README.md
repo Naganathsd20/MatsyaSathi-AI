@@ -472,6 +472,8 @@ MatsyaSathi-AI/
 
 Built with the vision of using AI for **social impact, safety, inclusion and livelihood empowerment** of India's coastal fishing communities.
 
+Demonstration vedio link https://drive.google.com/file/d/1qx2YhNPhS0UlRKbgu_zR7QFfX33nN5Ds/view?usp=drive_link
+
 ---
 
 ### 🌊 MatsyaSathi AI
