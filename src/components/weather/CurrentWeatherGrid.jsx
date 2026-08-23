@@ -60,21 +60,21 @@ export const CurrentWeatherGrid = ({ currentData }) => {
         return (
           <div
             key={idx}
-            className="glass-card rounded-2xl p-4 border border-sky-500/20 flex flex-col justify-between"
+            className="glass-card rounded-2xl p-4 border border-cyan-900/40 flex flex-col justify-between shadow-md"
           >
             <div>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-xl">{item.emoji}</span>
-                <div className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400">
+                <div className="p-1.5 rounded-lg bg-[#071F33] border border-cyan-900/40 text-cyan-400">
                   <IconComponent className="w-4 h-4" />
                 </div>
               </div>
-              <h3 className="text-xs font-medium text-slate-400">{item.title}</h3>
-              <div className="text-xl font-bold text-slate-100 mt-1 tracking-tight">
+              <h3 className="text-xs font-extrabold text-slate-400 uppercase tracking-wider">{item.title}</h3>
+              <div className="text-2xl font-black text-white mt-1 tracking-tight">
                 {item.value}
               </div>
             </div>
-            <p className="text-[11px] text-slate-400 mt-2 pt-2 border-t border-slate-800/80 truncate">
+            <p className="text-xs text-slate-300 font-semibold mt-2 pt-2 border-t border-cyan-900/30 truncate">
               {item.subtitle}
             </p>
           </div>

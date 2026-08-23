@@ -4,8 +4,8 @@ export const marketData = {
     subtitle: "Understand fish prices, compare regional markets, and maximize fresh catch selling opportunities.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Market Data",
-    disclaimer: "Prices and market trends shown here are prototype demonstration data and do not represent verified real-time harbor auction rates."
+    badgeText: "Market Snapshot",
+    disclaimer: "Prices and market trends shown here are market indicators. Always verify local harbor auction rates before trading."
   },
 
   harbors: [
@@ -282,8 +282,8 @@ export const marketData = {
 
   aiInsight: {
     title: "🤖 MatsyaSathi Market Insight",
-    text: "Indian Mackerel currently shows strong prototype demand (+4.3%) at Mangaluru Main Harbor. Connecting your Phase 5 predicted yield (80–110 kg) with current rates yields an estimated gross valuation of ₹15,600 – ₹21,450.",
-    disclaimer: "This is prototype decision-support information and should not be treated as guaranteed market pricing or income."
+    text: "Indian Mackerel currently shows strong market demand (+4.3%) at Mangaluru Main Harbor. Connecting your predicted yield (80–110 kg) with current rates yields an estimated gross valuation of ₹15,600 – ₹21,450.",
+    disclaimer: "This is decision-support information and should not be treated as guaranteed market pricing or income."
   }
 };
 

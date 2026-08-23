@@ -8,7 +8,7 @@ export const AppLayout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col lg:flex-row antialiased selection:bg-cyan-500 selection:text-slate-950">
+    <div className="min-h-screen bg-[#03111F] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#082238] via-[#03111F] to-[#010A14] text-slate-100 flex flex-col lg:flex-row antialiased selection:bg-cyan-500 selection:text-white">
       {/* Desktop Left Sidebar */}
       <Sidebar className="hidden lg:flex" />
 
@@ -24,7 +24,7 @@ export const AppLayout = () => {
         <Navbar onMobileMenuOpen={() => setMobileMenuOpen(true)} />
 
         {/* Dynamic Page Outlet */}
-        <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl w-full mx-auto">
+        <main className="flex-1 p-4 sm:p-6 lg:p-8 max-w-[1480px] w-full mx-auto">
           <Outlet />
         </main>
       </div>

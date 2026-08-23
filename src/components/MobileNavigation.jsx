@@ -15,36 +15,36 @@ export const MobileNavigation = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 lg:hidden">
-      {/* Dark backdrop overlay */}
+      {/* Backdrop overlay */}
       <div
-        className="fixed inset-0 bg-slate-950/80 backdrop-blur-sm transition-opacity"
+        className="fixed inset-0 bg-slate-950/80 backdrop-blur-xs transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Slide-out navigation drawer */}
-      <aside className="fixed inset-y-0 left-0 max-w-xs w-full bg-slate-950 border-r border-slate-800 shadow-2xl flex flex-col justify-between z-50">
+      <aside className="fixed inset-y-0 left-0 max-w-xs w-full bg-[#051726] border-r border-cyan-900/40 shadow-2xl flex flex-col justify-between z-50 text-slate-100">
         <div>
           {/* Drawer Header */}
-          <div className="p-4 border-b border-slate-800 flex items-center justify-between">
+          <div className="p-4 border-b border-cyan-900/30 flex items-center justify-between">
             <div className="flex items-center gap-2.5">
               <div className="p-2 rounded-lg ocean-gradient-btn text-white">
                 <Anchor className="w-5 h-5" />
               </div>
-              <span className="font-bold text-base text-slate-100">MatsyaSathi AI</span>
+              <span className="font-bold text-base text-white">MatsyaSathi AI</span>
             </div>
             <button
               onClick={onClose}
               aria-label="Close menu"
-              className="p-1.5 rounded-lg bg-slate-900 text-slate-400 hover:text-white border border-slate-800"
+              className="p-1.5 rounded-lg bg-[#0B253C] text-slate-300 hover:text-white border border-cyan-900/40"
             >
               <X className="w-5 h-5" />
             </button>
           </div>
 
           {/* Drawer Links */}
-          <nav className="p-3 space-y-1 overflow-y-auto max-h-[calc(100vh-160px)]">
-            <div className="px-3 py-2 text-[10px] uppercase font-bold tracking-wider text-slate-500">
+          <nav className="p-3 space-y-1.5 overflow-y-auto max-h-[calc(100vh-160px)]">
+            <div className="px-3.5 py-1.5 text-xs uppercase font-extrabold tracking-wider text-slate-500">
               Quick Navigation
             </div>
             {navItems.map((item) => {
@@ -55,21 +55,16 @@ export const MobileNavigation = ({ isOpen, onClose }) => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-xs font-medium transition-all ${
+                  className={`flex items-center justify-between px-3.5 py-3 rounded-xl text-sm font-semibold transition-all ${
                     isActive
-                      ? 'bg-sky-500/20 text-sky-300 border border-sky-500/40 font-semibold'
-                      : 'text-slate-300 hover:text-white hover:bg-slate-900'
+                      ? 'bg-cyan-500/15 text-cyan-300 border-l-2 border-cyan-400 font-bold shadow-xs'
+                      : 'text-slate-300 hover:text-white hover:bg-slate-800/60'
                   }`}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-500'}`} />
+                    <Icon className={`w-5 h-5 shrink-0 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
                     <span>{item.name}</span>
                   </div>
-                  {item.phase && (
-                    <span className="text-[9px] px-1.5 py-0.5 rounded bg-slate-800 text-slate-400 shrink-0">
-                      {item.phase}
-                    </span>
-                  )}
                 </NavLink>
               );
             })}
@@ -77,10 +72,10 @@ export const MobileNavigation = ({ isOpen, onClose }) => {
         </div>
 
         {/* Drawer Footer */}
-        <div className="p-4 border-t border-slate-800 bg-slate-900/60">
-          <div className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+        <div className="p-4 border-t border-cyan-900/30 bg-[#071F33]">
+          <div className="flex items-center gap-2 text-xs text-slate-300 font-semibold">
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Phase 1 Project Foundation</span>
+            <span>MatsyaSathi AI • Marine Operations</span>
           </div>
         </div>
       </aside>

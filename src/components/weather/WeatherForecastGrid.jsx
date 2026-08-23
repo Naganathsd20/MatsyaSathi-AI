@@ -9,20 +9,20 @@ export const WeatherForecastGrid = ({ forecast }) => {
   };
 
   return (
-    <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 space-y-4 shadow-md">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-cyan-900/30">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-sky-400">
+          <div className="p-2.5 rounded-2xl bg-[#071F33] border border-cyan-900/40 text-cyan-400">
             <Calendar className="w-6 h-6" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-xl font-bold text-slate-100">📅 Weather Forecast</h2>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-slate-400 border border-slate-700 font-medium">
-                Prototype Forecast
+              <h2 className="text-xl sm:text-2xl font-extrabold text-white">📅 Weather Forecast</h2>
+              <span className="text-xs px-2.5 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-bold">
+                3-Day Forecast
               </span>
             </div>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs sm:text-sm text-slate-300 font-medium mt-0.5">
               3-day coastal marine forecast summary for fishermen.
             </p>
           </div>
@@ -35,40 +35,40 @@ export const WeatherForecastGrid = ({ forecast }) => {
           return (
             <div
               key={idx}
-              className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-sky-500/30 transition-all flex flex-col justify-between"
+              className="p-5 rounded-2xl bg-[#0B253C] border border-cyan-900/40 hover:border-cyan-400/50 transition-all flex flex-col justify-between shadow-md"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">
                   <div>
-                    <span className="font-bold text-base text-slate-100">{dayItem.day}</span>
-                    <span className="text-xs text-slate-400 font-mono ml-2">({dayItem.date})</span>
+                    <span className="font-extrabold text-lg text-white">{dayItem.day}</span>
+                    <span className="text-xs text-slate-400 font-mono font-bold ml-2">({dayItem.date})</span>
                   </div>
-                  <div className="p-2 rounded-xl bg-sky-500/10 border border-sky-500/20 text-cyan-400">
+                  <div className="p-2 rounded-xl bg-[#071F33] border border-cyan-900/40 text-cyan-400">
                     <IconComp className="w-5 h-5" />
                   </div>
                 </div>
 
-                <div className="text-3xl font-extrabold text-slate-100 tracking-tight mb-2">
+                <div className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-2">
                   {dayItem.temp}
                 </div>
 
-                <div className="text-xs font-semibold text-cyan-300 mb-3">
+                <div className="text-sm font-extrabold text-cyan-300 mb-3">
                   {dayItem.condition}
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-800/80 space-y-1.5 text-xs text-slate-300">
+              <div className="pt-3 border-t border-cyan-900/30 space-y-1.5 text-xs sm:text-sm font-medium text-slate-300">
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Rain Probability:</span>
-                  <span className="font-semibold text-slate-200">{dayItem.rainProb}</span>
+                  <span className="text-slate-400 font-medium">Wind Speed:</span>
+                  <span className="font-extrabold text-white">{dayItem.wind}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Wind Velocity:</span>
-                  <span className="font-semibold text-slate-200">{dayItem.wind}</span>
+                  <span className="text-slate-400 font-medium">Wave Height:</span>
+                  <span className="font-extrabold text-white">{dayItem.waveHeight}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-slate-400">Wave Height:</span>
-                  <span className="font-semibold text-slate-200">{dayItem.waveHeight}</span>
+                  <span className="text-slate-400 font-medium">Rain Prob:</span>
+                  <span className="font-extrabold text-white">{dayItem.rainProbability}</span>
                 </div>
               </div>
             </div>

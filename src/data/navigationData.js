@@ -5,7 +5,6 @@ export const NAV_ITEMS = [
     path: '/dashboard',
     iconName: 'LayoutDashboard',
     description: 'Overview of sea conditions, safety status & quick tools',
-    isPhase1: true,
   },
   {
     id: 'weather',
@@ -13,8 +12,6 @@ export const NAV_ITEMS = [
     path: '/weather',
     iconName: 'CloudSun',
     description: 'Live wave height, wind speeds, tide charts & ocean forecasting',
-    isPhase1: false,
-    phaseText: 'Phase 2: Live Sensor & Satellite Integration',
   },
   {
     id: 'zones',
@@ -22,8 +19,6 @@ export const NAV_ITEMS = [
     path: '/zones',
     iconName: 'Compass',
     description: 'Potential Fishing Zones (PFZ) and sea surface temperature maps',
-    isPhase1: false,
-    phaseText: 'Phase 2: Oceanographic Data & PFZ Models',
   },
   {
     id: 'catch-prediction',
@@ -31,8 +26,6 @@ export const NAV_ITEMS = [
     path: '/catch-prediction',
     iconName: 'TrendingUp',
     description: 'AI species distribution forecasts & yield likelihood',
-    isPhase1: false,
-    phaseText: 'Phase 3: Machine Learning Catch Algorithms',
   },
   {
     id: 'safety',
@@ -40,8 +33,6 @@ export const NAV_ITEMS = [
     path: '/safety',
     iconName: 'ShieldAlert',
     description: 'Emergency SOS, cyclone alerts, boundary warnings & storm tracking',
-    isPhase1: false,
-    phaseText: 'Phase 2: Real-time Maritime Alert Feeds',
   },
   {
     id: 'market',
@@ -49,8 +40,6 @@ export const NAV_ITEMS = [
     path: '/market',
     iconName: 'Store',
     description: 'Harbor fish prices, buyer connect & catch logging',
-    isPhase1: false,
-    phaseText: 'Phase 3: Direct Harbor Marketplace & Price Sync',
   },
   {
     id: 'vessel-planner',
@@ -58,8 +47,6 @@ export const NAV_ITEMS = [
     path: '/vessel-planner',
     iconName: 'Navigation',
     description: 'Route optimization, fuel calculation & trip logs',
-    isPhase1: false,
-    phaseText: 'Phase 3: GPS Route Engine & Fuel Analytics',
   },
   {
     id: 'community',
@@ -67,8 +54,6 @@ export const NAV_ITEMS = [
     path: '/community',
     iconName: 'Users',
     description: 'Local fisherman tips, danger spot sharing & peer logs',
-    isPhase1: false,
-    phaseText: 'Phase 4: Community Knowledge Network',
   },
   {
     id: 'ai-assistant',
@@ -76,8 +61,6 @@ export const NAV_ITEMS = [
     path: '/ai-assistant',
     iconName: 'Bot',
     description: 'Multilingual voice/text fishing advisor powered by LLMs',
-    isPhase1: false,
-    phaseText: 'Phase 4: Multilingual Voice & AI Advisor',
   },
   {
     id: 'settings',
@@ -85,8 +68,6 @@ export const NAV_ITEMS = [
     path: '/settings',
     iconName: 'Settings',
     description: 'Vessel configuration, units, language & offline modes',
-    isPhase1: false,
-    phaseText: 'Phase 2: Custom Preferences & Regional Language Settings',
   },
 ];
 

@@ -62,7 +62,7 @@ export const CommunityPage = () => {
             ))
           ) : (
             <div className="col-span-full p-8 text-center glass-panel rounded-2xl border border-slate-800 text-xs text-slate-400">
-              No prototype community posts match the selected category.
+              No community posts match the selected category.
             </div>
           )}
         </div>

@@ -12,8 +12,8 @@ export const aiAssistantData = {
     subtitle: "Ask questions about weather, fishing zones, catch potential, safety, markets, trips, and local fishing knowledge.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype AI Assistant",
-    disclaimer: "This prototype assistant provides decision-support suggestions based on demonstration data. It is not a substitute for official marine advisories, Coast Guard instructions, or professional judgment."
+    badgeText: "MatsyaSathi AI Assistant",
+    disclaimer: "This assistant provides AI decision-support suggestions. It is not a substitute for official marine advisories, Coast Guard instructions, or professional maritime judgment."
   },
 
   suggestedQuestions: [
@@ -39,7 +39,7 @@ export const aiAssistantData = {
     id: "welcome",
     sender: "assistant",
     time: "Just now",
-    text: "👋 Hello, Captain! I am your MatsyaSathi AI Fishing Assistant.\n\nI can help you explore today's prototype marine conditions across weather, fishing zones, catch potential, safety checks, market rates, trip planning, and local community tips.",
+    text: "👋 Hello, Captain! I am your MatsyaSathi AI Fishing Assistant.\n\nI can help you explore today's marine conditions across weather, fishing zones, catch potential, safety checks, market rates, trip planning, and local community tips.",
     sources: ["Weather", "Fishing Zones", "Catch Prediction", "Safety Center", "Market", "Vessel Planner", "Community Tips"]
   },
 
@@ -60,16 +60,16 @@ export const aiAssistantData = {
     const isSafety = q.includes("safe") || q.includes("safety") || q.includes("hazard") || q.includes("alert") || q.includes("danger") || q.includes("risk") || q.includes("checklist") || q.includes("emergency");
 
     // 5. Market Intent
-    const isMarket = q.includes("market") || q.includes("price") || q.includes("sell") || q.includes("rate") || q.includes("auction") || q.includes("rupee") || q.includes("₹") || q.includes("cost") || q.includes("buyer");
+    const isMarket = q.includes("market") || q.includes("price") || q.includes("rate") || q.includes("sell") || q.includes("buyer") || q.includes("mackerel") || q.includes("sardine") || q.includes("tuna");
 
-    // 6. Trip/Vessel Intent
-    const isTrip = q.includes("trip") || q.includes("plan") || q.includes("vessel") || q.includes("boat") || q.includes("fuel") || q.includes("departure") || q.includes("leave") || q.includes("duration");
+    // 6. Trip Intent
+    const isTrip = q.includes("trip") || q.includes("plan") || q.includes("vessel") || q.includes("route") || q.includes("fuel") || q.includes("depart") || q.includes("return");
 
     // 7. Community Intent
-    const isCommunity = q.includes("tip") || q.includes("community") || q.includes("fisherman") || q.includes("advice") || q.includes("wisdom") || q.includes("peer");
+    const isCommunity = q.includes("tip") || q.includes("community") || q.includes("advice") || q.includes("fellow") || q.includes("fishermen") || q.includes("wisdom");
 
-    const activeZone = fishingZonesData.zones[0]; // Zone A
     const activeWeather = weatherData.current;
+    const activeZone = fishingZonesData.zones[0]; // Zone A
     const activeCatch = catchPredictionData.predictions["zone-a"];
     const activeSafety = safetyData.overallStatus;
     const activeMarket = marketData.speciesData[0]; // Mackerel
@@ -78,7 +78,7 @@ export const aiAssistantData = {
     // --- Weather & Sea Response ---
     if (isWeather && !isZone && !isCatch && !isSafety && !isMarket && !isTrip) {
       return {
-        text: `Today's prototype weather on the Mangaluru Coast indicates **${activeWeather.seaCondition}** sea conditions with a surface temperature of **${activeWeather.temperature}**.\n\n• Wind: **${activeWeather.windSpeed} (${activeWeather.windDirection})**\n• Wave Swell: **${activeWeather.waveHeight}**\n• Visibility: **${activeWeather.visibility}**\n• Rain Risk: **${activeWeather.rainProbability}**\n\nThe recommended fishing window is **05:30 AM – 09:30 AM**.`,
+        text: `Today's weather on the Mangaluru Coast indicates **${activeWeather.seaCondition}** sea conditions with a surface temperature of **${activeWeather.temperature}**.\n\n• Wind: **${activeWeather.windSpeed} (${activeWeather.windDirection})**\n• Wave Swell: **${activeWeather.waveHeight}**\n• Visibility: **${activeWeather.visibility}**\n• Rain Risk: **${activeWeather.rainProbability}**\n\nThe recommended fishing window is **05:30 AM – 09:30 AM**.`,
         sources: ["Weather & Sea Intelligence"],
         cardType: "weather",
         cardData: {
@@ -94,7 +94,7 @@ export const aiAssistantData = {
     // --- Zone Response ---
     if (isZone && !isCatch && !isTrip) {
       return {
-        text: `Based on prototype environmental scoring, **${activeZone.name}** is the top recommended fishing sector today.\n\n• Suitability Score: **${activeZone.score} / 100** (${activeZone.statusBadge})\n• Distance from Harbor: **${activeZone.distance}**\n• Water Depth: **${activeZone.depth}**\n• Target Species: **${activeZone.targetSpecies.join(", ")}**\n\nZone A currently has optimal sea state stability and minimal wave interference.`,
+        text: `Based on environmental scoring, **${activeZone.name}** is the top recommended fishing sector today.\n\n• Suitability Score: **${activeZone.score} / 100** (${activeZone.statusBadge})\n• Distance from Harbor: **${activeZone.distance}**\n• Water Depth: **${activeZone.depth}**\n• Target Species: **${activeZone.targetSpecies.join(", ")}**\n\nZone A currently has optimal sea state stability and minimal wave interference.`,
         sources: ["Fishing Zone Recommendations"],
         cardType: "zone",
         cardData: {
@@ -110,7 +110,7 @@ export const aiAssistantData = {
     // --- Catch Potential Response ---
     if (isCatch && !isMarket && !isTrip) {
       return {
-        text: `For **Zone A**, the estimated prototype catch yield is **${activeCatch.estimatedRange}**.\n\n• Potential Rating: **${activeCatch.badgeText}**\n• Confidence Level: **${activeCatch.confidenceScore}% (${activeCatch.confidenceBadge})**\n• Key Target Species: **Indian Mackerel & Sardine**\n\nHigh potential is supported by favorable sea state, moderate wind, and suitable water depth.`,
+        text: `For **Zone A**, the estimated catch yield is **${activeCatch.estimatedRange}**.\n\n• Potential Rating: **${activeCatch.badgeText}**\n• Confidence Level: **${activeCatch.confidenceScore}% (${activeCatch.confidenceBadge})**\n• Key Target Species: **Indian Mackerel & Sardine**\n\nHigh potential is supported by favorable sea state, moderate wind, and suitable water depth.`,
         sources: ["Catch Prediction"],
         cardType: "catch",
         cardData: {
@@ -125,7 +125,7 @@ export const aiAssistantData = {
     // --- Safety Response ---
     if (isSafety) {
       return {
-        text: `Current prototype safety level is **${activeSafety.badgeText}**.\n\n• ${activeSafety.message}\n• Active Advisory: **⚠️ Moderate Wind Advisory** around noon.\n• Safety Score: **82 / 100 (NORMAL)**\n\n*Reminder: Always verify official Coast Guard marine advisories and complete your pre-departure checklist before unmooring.*`,
+        text: `Current safety status is **${activeSafety.badgeText}**.\n\n• ${activeSafety.message}\n• Active Advisory: **⚠️ Moderate Wind Advisory** around noon.\n• Safety Score: **82 / 100 (NORMAL)**\n\n*Reminder: Always verify official Coast Guard marine advisories and complete your pre-departure checklist before unmooring.*`,
         sources: ["Safety Center"],
         cardType: "safety",
         cardData: {
@@ -139,7 +139,7 @@ export const aiAssistantData = {
     // --- Market Response ---
     if (isMarket && !isTrip) {
       return {
-        text: `The top prototype market selling opportunity today is **${activeMarket.species} (${activeMarket.localName})**.\n\n• Current Rate: **${activeMarket.priceFormatted}** (${activeMarket.change})\n• Buyer Demand: **${activeMarket.demand}**\n• Recommended Harbor: **${activeMarket.recommendedMarket}**\n\nPre-sorting mackerel into size grades at Mangaluru jetty can fetch up to ₹15/kg higher auction bids.`,
+        text: `The top market selling opportunity today is **${activeMarket.species} (${activeMarket.localName})**.\n\n• Current Rate: **${activeMarket.priceFormatted}** (${activeMarket.change})\n• Buyer Demand: **${activeMarket.demand}**\n• Recommended Harbor: **${activeMarket.recommendedMarket}**\n\nPre-sorting mackerel into size grades at Mangaluru jetty can fetch up to ₹15/kg higher auction bids.`,
         sources: ["Market & Supply Chain"],
         cardType: "market",
         cardData: {
@@ -155,7 +155,7 @@ export const aiAssistantData = {
     // --- Trip / Vessel Planner Response ---
     if (isTrip) {
       return {
-        text: `Here is the recommended prototype voyage plan for a **${activeVessel.name}** heading to **Zone A**:\n\n• Departure Window: **05:30 AM**\n• Zone Arrival: **06:02 AM** (32 mins transit)\n• Active Fishing Window: **06:02 AM – 10:02 AM** (4 Hours)\n• Harbor Return: **10:34 AM**\n• Fuel Required: **~24 Liters** (plus 8L reserve)\n• Estimated Round-trip: **16 km**`,
+        text: `Here is the recommended voyage plan for a **${activeVessel.name}** heading to **Zone A**:\n\n• Departure Window: **05:30 AM**\n• Zone Arrival: **06:02 AM** (32 mins transit)\n• Active Fishing Window: **06:02 AM – 10:02 AM** (4 Hours)\n• Harbor Return: **10:34 AM**\n• Fuel Required: **~24 Liters** (plus 8L reserve)\n• Estimated Round-trip: **16 km**`,
         sources: ["Vessel Planner", "Fishing Zones", "Weather"],
         cardType: "trip",
         cardData: {
@@ -172,7 +172,7 @@ export const aiAssistantData = {
     if (isCommunity) {
       const tip = communityData.featuredTip;
       return {
-        text: `Here is the top prototype tip from the fishermen community today:\n\n**"${tip.title}"**\n*By ${tip.author} (${tip.communityRole})*\n\n"${tip.description}"\n\n👍 **${tip.helpfulCount} fishermen** found this tip helpful.`,
+        text: `Here is the top tip from the fishermen community today:\n\n**"${tip.title}"**\n*By ${tip.author} (${tip.communityRole})*\n\n"${tip.description}"\n\n👍 **${tip.helpfulCount} fishermen** found this tip helpful.`,
         sources: ["Community & Tips"],
         cardType: "community",
         cardData: {
@@ -185,7 +185,7 @@ export const aiAssistantData = {
 
     // --- Multi-Module / Comprehensive Overview Response ---
     return {
-      text: `Here is today's comprehensive prototype fishing intelligence overview for **Mangaluru Coast**:\n\n1. **Recommended Sector**: **Zone A** (8 km, Score 86/100, High Suitability)\n2. **Expected Catch**: **80–110 kg** (High Potential, 78% Confidence)\n3. **Market Opportunity**: **Indian Mackerel** at **₹195/kg** (High Demand at Mangaluru Harbor)\n4. **Recommended Voyage**: Depart **05:30 AM**, return by **10:34 AM** (~24L fuel needed)\n5. **Safety Level**: **🟢 NORMAL** (Verify official marine weather before departure)`,
+      text: `Here is today's comprehensive fishing intelligence overview for **Mangaluru Coast**:\n\n1. **Recommended Sector**: **Zone A** (8 km, Score 86/100, High Suitability)\n2. **Expected Catch**: **80–110 kg** (High Potential, 78% Confidence)\n3. **Market Opportunity**: **Indian Mackerel** at **₹195/kg** (High Demand at Mangaluru Harbor)\n4. **Recommended Voyage**: Depart **05:30 AM**, return by **10:34 AM** (~24L fuel needed)\n5. **Safety Level**: **🟢 NORMAL** (Verify official marine weather before departure)`,
       sources: ["Weather & Sea", "Fishing Zones", "Catch Prediction", "Safety Center", "Market & Supply", "Vessel Planner"],
       cardType: "overview",
       cardData: {

@@ -13,82 +13,82 @@ import {
 
 export const navItems = [
   {
+    key: 'dashboard',
     name: 'Dashboard',
     path: '/dashboard',
     icon: LayoutDashboard,
-    phase: 'Phase 2',
     isFunctional: true
   },
   {
+    key: 'weather',
     name: 'Weather & Sea',
     path: '/weather',
     icon: CloudSun,
-    phase: 'Phase 3',
-    isFunctional: false,
+    isFunctional: true,
     description: 'Real-time wind, wave height, tide schedules, and storm advisories for coastal waters.'
   },
   {
+    key: 'zones',
     name: 'Fishing Zones',
     path: '/zones',
     icon: MapPin,
-    phase: 'Phase 4',
-    isFunctional: false,
+    isFunctional: true,
     description: 'Potential Fishing Zone (PFZ) map layers, sea surface temperatures, and chlorophyll maps.'
   },
   {
+    key: 'catchPrediction',
     name: 'Catch Prediction',
     path: '/catch-prediction',
     icon: TrendingUp,
-    phase: 'Phase 5',
-    isFunctional: false,
+    isFunctional: true,
     description: 'AI-driven species presence forecasting based on water parameters and seasonal migration patterns.'
   },
   {
+    key: 'safety',
     name: 'Safety Alerts',
     path: '/safety',
     icon: ShieldAlert,
-    phase: 'Phase 6',
-    isFunctional: false,
-    description: 'SOS broadcaster, international maritime border warning system, and high-wave hazard advisories.'
+    isFunctional: true,
+    description: 'Real-time safety advisories, SOS beacon testing, emergency channel directories, and checklists.'
   },
   {
+    key: 'market',
     name: 'Market & Supply',
     path: '/market',
     icon: ShoppingBag,
-    phase: 'Phase 7',
-    isFunctional: false,
-    description: 'Live harbor auction prices, buyer connection network, and cold chain log tracking.'
+    isFunctional: true,
+    description: 'Harbor auction rates, daily species prices, buyers directory, and cold chain capacity monitoring.'
   },
   {
+    key: 'vesselPlanner',
     name: 'Vessel Planner',
     path: '/vessel-planner',
     icon: Navigation,
-    phase: 'Phase 8',
-    isFunctional: false,
-    description: 'Fuel cost estimator, distance-to-harbor calculator, and optimal navigational routing.'
+    isFunctional: true,
+    description: 'Trip fuel calculator, crew roster manager, departure window calculator, and route safety check.'
   },
   {
+    key: 'community',
     name: 'Community & Tips',
     path: '/community',
     icon: Users,
-    phase: 'Phase 9',
     isFunctional: true,
-    description: 'Fishermen peer knowledge exchange, regional safety updates, and sustainable fishing practices.'
+    description: 'Local knowledge exchange, species catching techniques, gear recommendations, and harbor updates.'
   },
   {
+    key: 'aiAssistant',
     name: 'AI Assistant',
     path: '/ai-assistant',
     icon: Bot,
-    phase: 'Phase 10',
     isFunctional: true,
-    description: 'Multilingual voice & text AI companion for sea regulations, gear advice, and weather queries.'
+    description: 'Natural language AI companion answering weather, zone, market, and safety queries.'
   },
   {
+    key: 'settings',
     name: 'Settings',
     path: '/settings',
     icon: Settings,
-    phase: 'Phase 11',
     isFunctional: true,
-    description: 'Language selection (Kannada, Malayalam, Tamil, Hindi, English), offline map tile cache, vessel registration profile, and alert thresholds.'
+    description: 'System preferences, language selection, harbor configuration, vessel profiles, and alert thresholds.'
   }
 ];

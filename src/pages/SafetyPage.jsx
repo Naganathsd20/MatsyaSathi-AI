@@ -41,16 +41,16 @@ export const SafetyPage = () => {
       </div>
 
       {/* 3. Active Safety Alerts Section */}
-      <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+      <div className="glass-card rounded-3xl p-6 border border-sky-100 space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-sky-100">
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-xl font-bold text-slate-100">🚨 Active Safety Alerts</h2>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-slate-800 text-amber-300 border border-amber-500/30 font-medium">
-                Prototype Alerts ({filteredAlerts.length})
+              <h2 className="text-xl font-bold text-slate-900">🚨 Active Safety Alerts</h2>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-amber-50 text-amber-800 border border-amber-200 font-bold">
+                Active Alerts ({filteredAlerts.length})
               </span>
             </div>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-600 mt-0.5">
               Filterable coastal hazard advisories and pre-departure reminders.
             </p>
           </div>
@@ -67,8 +67,8 @@ export const SafetyPage = () => {
               <SafetyAlertCard key={alert.id} alert={alert} />
             ))
           ) : (
-            <div className="col-span-full p-8 text-center glass-panel rounded-2xl border border-slate-800 text-xs text-slate-400">
-              No prototype alerts match the selected filter category.
+            <div className="col-span-full p-8 text-center bg-white rounded-2xl border border-sky-100 text-xs text-slate-600 font-medium">
+              No alerts match the selected filter category.
             </div>
           )}
         </div>

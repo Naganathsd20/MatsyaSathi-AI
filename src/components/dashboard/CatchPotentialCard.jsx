@@ -1,52 +1,55 @@
 import React from 'react';
 import { TrendingUp, ArrowRight, Info, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../../context/LanguageContext';
 
 export const CatchPotentialCard = ({ catchData }) => {
+  const { t } = useLanguage();
+
   return (
-    <div className="glass-card rounded-2xl p-5 border border-sky-500/20 relative flex flex-col justify-between h-full">
+    <div className="glass-card rounded-2xl p-5 border border-cyan-900/40 relative flex flex-col justify-between h-full shadow-md">
       <div>
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-2.5">
-            <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <div className="p-2.5 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400">
               <TrendingUp className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-sm font-bold text-slate-100">🐟 Catch Potential</h3>
-              <span className="text-[10px] text-slate-400 font-medium">{catchData.confidence}</span>
+              <h3 className="text-base font-bold text-white">🐟 {t('dashboard.catchPotential', 'Catch Potential')}</h3>
+              <span className="text-xs text-slate-400 font-semibold">{catchData.confidence}</span>
             </div>
           </div>
-          <span className="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+          <span className="px-3 py-1 rounded-full text-xs font-black bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
             {catchData.status}
           </span>
         </div>
 
         <div className="my-3">
-          <div className="text-2xl font-bold text-slate-100 tracking-tight">
+          <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
             {catchData.estimatedCatch}
           </div>
-          <p className="text-xs text-slate-400 mt-0.5">Estimated catch yield range for today's morning voyage.</p>
+          <p className="text-xs sm:text-sm text-slate-300 font-medium mt-1">Estimated catch yield range for today's morning voyage.</p>
         </div>
 
-        {/* Phase 5 Active Note */}
-        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs text-slate-300 space-y-1 my-2">
-          <div className="flex items-center gap-1.5 text-cyan-400 font-semibold text-[11px]">
-            <Info className="w-3.5 h-3.5 shrink-0" />
-            <span>Phase 5 Catch Potential Active</span>
+        {/* Catch Potential Forecast Note */}
+        <div className="p-3.5 rounded-xl bg-[#071F33] border border-cyan-900/40 text-xs sm:text-sm text-slate-300 space-y-1 my-2">
+          <div className="flex items-center gap-1.5 text-cyan-300 font-bold text-xs">
+            <Info className="w-4 h-4 shrink-0 text-cyan-400" />
+            <span>Catch Potential Forecast</span>
           </div>
-          <p className="text-[11px] text-slate-400 leading-snug">
-            Prototype catch prediction based on Zone A sea state, depth, and environmental factors.
+          <p className="text-xs text-slate-300 leading-relaxed font-medium">
+            Catch potential calculated based on Zone A sea state, depth, and environmental factors.
           </p>
         </div>
       </div>
 
-      <div className="mt-4 pt-3 border-t border-slate-800/80">
+      <div className="mt-4 pt-3 border-t border-cyan-900/30">
         <Link
           to="/catch-prediction"
-          className="inline-flex items-center text-xs font-semibold text-cyan-400 hover:text-cyan-300 gap-1.5 transition-all"
+          className="inline-flex items-center text-xs sm:text-sm font-bold text-cyan-400 hover:text-cyan-200 gap-1.5 transition-all"
         >
           <span>View Catch Prediction</span>
-          <ArrowRight className="w-3.5 h-3.5" />
+          <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
     </div>

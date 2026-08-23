@@ -4,8 +4,8 @@ export const settingsData = {
     subtitle: "Configure regional language preferences, primary landing harbor, vessel profile, offline map cache, and marine alert thresholds.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Settings",
-    disclaimer: "Settings preferences and vessel profile details configured here are saved locally in your browser session for decision support and demonstration."
+    badgeText: "System Preferences",
+    disclaimer: "Settings preferences and vessel profile details configured here are saved locally on your device for trip customization and decision support."
   },
 
   languages: [
@@ -17,10 +17,65 @@ export const settingsData = {
   ],
 
   coastalRegions: [
-    { id: "mangaluru", name: "Mangaluru Coast", state: "Karnataka", harbors: ["Mangaluru Main Harbor", "Ullal Landing Center"] },
-    { id: "malpe", name: "Malpe / Udupi Sector", state: "Karnataka", harbors: ["Malpe Harbor", "Hangarkatta Jetty"] },
-    { id: "karwar", name: "Karwar / Uttara Kannada", state: "Karnataka", harbors: ["Honnavar Harbor", "Tadri Jetty"] },
-    { id: "kasaragod", name: "Kasaragod Northern Sector", state: "Kerala", harbors: ["Kasaragod Estuary", "Manjeshwar Jetty"] }
+    {
+      id: "karnataka",
+      name: "Karnataka Coast",
+      state: "Karnataka",
+      harbors: [
+        "Mangaluru Old Port",
+        "Malpe Fishing Harbor",
+        "Karwar Fishing Harbor",
+        "Honnavar Fishing Harbor",
+        "Bhatkal Fishing Harbor"
+      ]
+    },
+    {
+      id: "kerala",
+      name: "Kerala Coast",
+      state: "Kerala",
+      harbors: [
+        "Kochi Fishing Harbor",
+        "Beypore Fishing Harbor",
+        "Kozhikode Fishing Harbor",
+        "Kollam Fishing Harbor",
+        "Vizhinjam Fishing Harbor"
+      ]
+    },
+    {
+      id: "goa",
+      name: "Goa Coast",
+      state: "Goa",
+      harbors: [
+        "Panaji Fishing Harbor",
+        "Vasco da Gama Fishing Harbor",
+        "Chapora Fishing Harbor",
+        "Betul Fishing Harbor"
+      ]
+    },
+    {
+      id: "tamilnadu",
+      name: "Tamil Nadu Coast",
+      state: "Tamil Nadu",
+      harbors: [
+        "Chennai Fishing Harbor",
+        "Nagapattinam Fishing Harbor",
+        "Rameswaram Fishing Harbor",
+        "Tuticorin Fishing Harbor",
+        "Cuddalore Fishing Harbor"
+      ]
+    },
+    {
+      id: "maharashtra",
+      name: "Maharashtra Coast",
+      state: "Maharashtra",
+      harbors: [
+        "Mumbai Fishing Harbor",
+        "Ratnagiri Fishing Harbor",
+        "Malvan Fishing Harbor",
+        "Alibag Fishing Harbor",
+        "Sindhudurg Fishing Harbor"
+      ]
+    }
   ],
 
   defaultVesselProfile: {
@@ -52,8 +107,8 @@ export const settingsData = {
 
   systemInfo: {
     appName: "MatsyaSathi AI",
-    version: "v1.11.0",
-    buildEdition: "Hackathon Production Edition",
+    version: "v1.0.0",
+    buildEdition: "MatsyaSathi AI Production",
     environment: "Client-Side Progressive Web App",
     localStorageUsage: "128 KB used / 5 MB available"
   }

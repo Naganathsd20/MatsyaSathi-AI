@@ -4,8 +4,8 @@ export const communityData = {
     subtitle: "Practical fishing knowledge, peer safety observations, seasonal guides, and local market tips from Mangaluru coastal fishermen.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Community",
-    disclaimer: "Community posts and tips displayed here are prototype demonstration content and should not replace official marine advisories or Coast Guard instructions."
+    badgeText: "Fisher Community & Tips",
+    disclaimer: "Community posts and tips displayed here are shared by fellow fishermen and should not replace official marine advisories or Coast Guard instructions."
   },
 
   categories: ["All", "Fishing Tips", "Safety", "Weather", "Species", "Market", "Seasonal"],
@@ -32,7 +32,7 @@ export const communityData = {
       time: "2 hours ago",
       description: "Always test VHF Channel 16 radio signal and verify distress flare expiration dates before passing the Mangaluru estuary bar. Swells can double in height near river mouth bars during outgoing tides.",
       helpfulCount: 38,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     },
     {
       id: 2,
@@ -43,7 +43,7 @@ export const communityData = {
       time: "4 hours ago",
       description: "Dark cumulus tower formation on the SW horizon past 11:30 AM indicates rapid wind gusts up to 22 km/h within two hours. Begin hauling gear early to return before rough sea development.",
       helpfulCount: 29,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     },
     {
       id: 3,
@@ -54,7 +54,7 @@ export const communityData = {
       time: "1 day ago",
       description: "Indian Mackerel (Bangude) currently concentrate around the 28m depth contour in Zone A. Watch for sea bird diving clusters and surface water ripple disruptions indicating feeding frenzy activity.",
       helpfulCount: 51,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     },
     {
       id: 4,
@@ -65,7 +65,7 @@ export const communityData = {
       time: "1 day ago",
       description: "Pre-sorting Indian Mackerel into Large (>200g) and Medium grades in iced crates before landing at Mangaluru Harbor fetch up to ₹15/kg higher auction bids from hotel buyers.",
       helpfulCount: 44,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     },
     {
       id: 5,
@@ -76,7 +76,7 @@ export const communityData = {
       time: "2 days ago",
       description: "Oil Sardines (Tarli) are moving into shallow 12–15m coastal waters following thermal salinity shifts. Early morning ring seine operations near shore yield clean, high-fat catches.",
       helpfulCount: 33,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     },
     {
       id: 6,
@@ -87,12 +87,12 @@ export const communityData = {
       time: "3 days ago",
       description: "Use lead sinker spacing of 1.5m along bottom footlines when fishing rocky bottoms near Zone B. This prevents gear snagging while maintaining net vertical opening.",
       helpfulCount: 27,
-      badge: "Prototype Tip"
+      badge: "Community Tip"
     }
   ],
 
   seasonalGuide: {
-    seasonName: "Post-Monsoon Coastal Season (Current Phase)",
+    seasonName: "Post-Monsoon Coastal Season (Current Season)",
     timeframe: "August – October",
     targetSpecies: ["Indian Mackerel", "Sardine", "Anchovy"],
     depthZone: "8 km – 15 km Inshore Coastal Sector",
@@ -151,7 +151,7 @@ export const communityData = {
     { rule: "Respectful Participation", desc: "Share authentic fishing observations and support fellow coastal fishermen." },
     { rule: "Verify Information", desc: "Always check official marine advisories alongside peer observations." },
     { rule: "Safety First", desc: "Prioritize crew safety and boat readiness over catch volume." },
-    { rule: "Prototype Disclaimer", desc: "Community tips are for demonstration & decision support." }
+    { rule: "Safety Disclaimer", desc: "Community tips are for peer knowledge sharing & decision support." }
   ]
 };
 

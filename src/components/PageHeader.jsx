@@ -10,34 +10,34 @@ export const PageHeader = ({
   badgeText = null
 }) => {
   return (
-    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-6 border-b border-slate-800/80">
+    <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 mb-6 border-b border-cyan-900/30">
       <div className="flex items-start gap-3.5">
         {Icon && (
-          <div className="p-3 rounded-2xl glass-panel border border-sky-500/20 text-sky-400 shrink-0">
+          <div className="p-3 rounded-2xl bg-[#0B253C] border border-cyan-900/40 text-cyan-400 shadow-md shrink-0">
             <Icon className="w-6 h-6" />
           </div>
         )}
         <div>
           <div className="flex items-center gap-2 flex-wrap mb-1">
-            <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-100">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white">
               {title}
             </h1>
             {badgeText && (
-              <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-500/10 text-sky-300 border border-sky-500/30">
+              <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-cyan-500/10 text-cyan-300 border border-cyan-500/30">
                 {badgeText}
               </span>
             )}
           </div>
           {subtitle && (
-            <p className="text-sm text-slate-400 max-w-2xl">{subtitle}</p>
+            <p className="text-sm sm:text-base text-slate-300 font-medium max-w-3xl leading-relaxed">{subtitle}</p>
           )}
         </div>
       </div>
 
       <div className="flex items-center gap-3">
         {location && (
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl glass-panel text-xs text-slate-300 border border-slate-700/60">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-[#0B253C] text-xs sm:text-sm text-cyan-300 font-bold border border-cyan-900/40 shadow-xs">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>{location}</span>
           </div>
         )}

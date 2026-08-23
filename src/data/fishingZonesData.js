@@ -1,11 +1,11 @@
 export const fishingZonesData = {
   header: {
     title: "Fishing Zone Recommendations",
-    subtitle: "Discover prototype fishing areas based on sea conditions, distance, depth, and suitability indicators.",
+    subtitle: "Discover optimal fishing areas based on sea conditions, distance, depth, and suitability indicators.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Recommendations",
-    disclaimer: "Zone recommendations shown here are prototype decision-support data and are not verified fishing advisories."
+    badgeText: "Recommended Fishing Zones",
+    disclaimer: "Zone recommendations shown here are decision-support estimates and do not replace official marine navigation advisories."
   },
 
   heroRecommendation: {
@@ -15,15 +15,15 @@ export const fishingZonesData = {
     maxScore: 100,
     suitability: "HIGH SUITABILITY",
     statusBadge: "⭐ Recommended",
-    summary: "Zone A currently has the strongest prototype suitability score based on the displayed sea condition, wind, wave height, distance, depth, and target-species indicators.",
+    summary: "Zone A currently has the strongest suitability score based on sea conditions, wind, wave height, distance, depth, and target-species indicators.",
     whyPoints: [
       "✓ Lower wave height (0.7 m)",
       "✓ Moderate wind (12 km/h)",
       "✓ Shorter distance from harbor (8 km)",
       "✓ Suitable water depth (28 m)",
-      "✓ Favorable prototype sea condition (Good)"
+      "✓ Favorable sea condition (Good)"
     ],
-    disclaimer: "Prototype scoring only. Verify official marine conditions before departure."
+    disclaimer: "Scoring based on multi-parameter environmental analysis. Verify official marine conditions before departure."
   },
 
   zones: [
@@ -46,7 +46,7 @@ export const fishingZonesData = {
       bestTime: "05:30 AM – 09:30 AM",
       coordinates: { x: 38, y: 58 },
       reasons: [
-        "Favorable prototype sea condition with stable swells",
+        "Favorable sea condition with stable swells",
         "Lower wave height reducing vessel resistance",
         "Moderate wind speed suitable for small crafts",
         "Shorter travel distance saving diesel fuel",

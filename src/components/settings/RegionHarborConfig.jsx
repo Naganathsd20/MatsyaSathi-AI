@@ -11,15 +11,15 @@ export const RegionHarborConfig = ({
   const activeRegion = coastalRegions.find(r => r.id === selectedRegionId) || coastalRegions[0];
 
   return (
-    <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 space-y-4 shadow-md">
+      <div className="flex items-center justify-between pb-3 border-b border-cyan-900/30">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-400">
+          <div className="p-2.5 rounded-2xl bg-[#071F33] border border-amber-500/40 text-amber-400">
             <Anchor className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-slate-100">📍 Primary Region & Home Jetty</h2>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <h2 className="text-xl font-bold text-white">📍 Primary Region & Home Jetty</h2>
+            <p className="text-xs text-slate-300 font-medium mt-0.5">
               Set default harbor location for telemetry ingestion, auction prices, and trip distance calculations.
             </p>
           </div>
@@ -29,7 +29,7 @@ export const RegionHarborConfig = ({
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {/* Coastal Operating Region */}
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+          <label className="text-xs font-bold text-white flex items-center gap-1.5">
             <MapPin className="w-3.5 h-3.5 text-cyan-400" /> Primary Coastal Region
           </label>
           <select
@@ -42,10 +42,10 @@ export const RegionHarborConfig = ({
                 onSelectHarbor(newReg.harbors[0]);
               }
             }}
-            className="w-full p-3 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-100 focus:outline-none focus:border-cyan-400"
+            className="w-full p-3 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-bold text-white focus:outline-none focus:border-cyan-400 shadow-md"
           >
             {coastalRegions.map((reg) => (
-              <option key={reg.id} value={reg.id}>
+              <option key={reg.id} value={reg.id} className="bg-[#051726]">
                 {reg.name} ({reg.state})
               </option>
             ))}
@@ -54,17 +54,17 @@ export const RegionHarborConfig = ({
 
         {/* Primary Home Harbor Jetty */}
         <div className="space-y-1.5">
-          <label className="text-xs font-bold text-slate-300 flex items-center gap-1.5">
+          <label className="text-xs font-bold text-white flex items-center gap-1.5">
             <Anchor className="w-3.5 h-3.5 text-amber-400" /> Home Landing Jetty / Harbor
           </label>
           <select
             value={selectedHarbor}
             onChange={(e) => onSelectHarbor(e.target.value)}
-            className="w-full p-3 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-100 focus:outline-none focus:border-cyan-400"
+            className="w-full p-3 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-bold text-amber-300 focus:outline-none focus:border-cyan-400 shadow-md"
           >
-            {activeRegion.harbors.map((h) => (
-              <option key={h} value={h}>
-                {h}
+            {activeRegion.harbors.map((harbor, idx) => (
+              <option key={idx} value={harbor} className="bg-[#051726]">
+                {harbor}
               </option>
             ))}
           </select>

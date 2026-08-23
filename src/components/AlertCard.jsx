@@ -10,25 +10,25 @@ export const AlertCard = ({
 }) => {
   const styles = {
     info: {
-      bg: 'bg-sky-950/40 border-sky-500/30',
+      bg: 'bg-[#07243B]/90 border-cyan-500/30',
       icon: Info,
-      iconColor: 'text-sky-400',
-      badge: 'bg-sky-500/20 text-sky-300'
+      iconColor: 'text-cyan-400',
+      badge: 'bg-cyan-500/20 text-cyan-300'
     },
     warning: {
-      bg: 'bg-amber-950/40 border-amber-500/30',
+      bg: 'bg-[#2E1F0A]/90 border-amber-500/30',
       icon: AlertTriangle,
       iconColor: 'text-amber-400',
       badge: 'bg-amber-500/20 text-amber-300'
     },
     danger: {
-      bg: 'bg-rose-950/40 border-rose-500/30',
+      bg: 'bg-[#2D0F16]/90 border-rose-500/30',
       icon: ShieldAlert,
       iconColor: 'text-rose-400',
       badge: 'bg-rose-500/20 text-rose-300'
     },
     success: {
-      bg: 'bg-emerald-950/40 border-emerald-500/30',
+      bg: 'bg-[#0B2A1E]/90 border-emerald-500/30',
       icon: CheckCircle2,
       iconColor: 'text-emerald-400',
       badge: 'bg-emerald-500/20 text-emerald-300'
@@ -39,19 +39,19 @@ export const AlertCard = ({
   const IconComponent = currentStyle.icon;
 
   return (
-    <div className={`p-4 rounded-xl border backdrop-blur-md ${currentStyle.bg} ${className} flex items-start gap-3.5 transition-all`}>
-      <div className={`p-2 rounded-lg bg-slate-900/60 border border-slate-800 ${currentStyle.iconColor} shrink-0`}>
+    <div className={`p-4 rounded-xl border ${currentStyle.bg} ${className} flex items-start gap-3.5 transition-all shadow-md`}>
+      <div className={`p-2 rounded-lg bg-[#0B253C] border border-cyan-900/40 ${currentStyle.iconColor} shrink-0 shadow-xs`}>
         <IconComponent className="w-5 h-5" />
       </div>
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center justify-between gap-2 mb-1">
-          <h4 className="text-sm font-semibold text-slate-200 truncate">{title}</h4>
+          <h4 className="text-base font-extrabold text-white truncate">{title}</h4>
           {time && (
-            <span className="text-[11px] text-slate-400 font-medium whitespace-nowrap">{time}</span>
+            <span className="text-xs text-slate-400 font-bold whitespace-nowrap">{time}</span>
           )}
         </div>
-        <p className="text-xs text-slate-300 leading-relaxed">{message}</p>
+        <p className="text-xs sm:text-sm text-slate-200 leading-relaxed font-medium">{message}</p>
       </div>
     </div>
   );

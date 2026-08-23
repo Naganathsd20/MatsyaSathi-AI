@@ -4,8 +4,8 @@ export const vesselPlannerData = {
     subtitle: "Configure vessel parameters, target zones, and schedule optimized fishing voyages with integrated safety and market intelligence.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Planner",
-    disclaimer: "Calculations and voyage recommendations shown here are prototype estimates and should not be used as official navigation or coast guard plans."
+    badgeText: "Vessel Trip Planner",
+    disclaimer: "Calculations and voyage recommendations shown here are decision-support estimates and should not be used as official navigation or coast guard plans."
   },
 
   vessels: [

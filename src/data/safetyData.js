@@ -4,15 +4,15 @@ export const safetyData = {
     subtitle: "Stay informed about marine conditions and complete essential safety checks before departure.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Safety Center",
-    disclaimer: "Prototype safety information. Always verify the latest official marine advisories before departure."
+    badgeText: "Maritime Safety Center",
+    disclaimer: "Always verify official marine weather and safety advisories before departure."
   },
 
   overallStatus: {
     status: "NORMAL",
     badgeText: "🟢 SAFE FOR NORMAL OPERATIONS",
     statusType: "success",
-    message: "Current prototype indicators do not show a major hazard, but fishermen should verify official marine advisories before departure.",
+    message: "Current safety indicators do not show a major hazard, but fishermen should verify official marine advisories before departure.",
     indicators: {
       seaCondition: "Moderate",
       windSpeed: "14 km/h",
@@ -45,9 +45,9 @@ export const safetyData = {
       severityLabel: "🟡 CAUTION",
       category: "Caution",
       title: "⚠️ Moderate Wind Advisory",
-      message: "Moderate winds are expected in the selected prototype region around noon.",
+      message: "Moderate winds are expected in the selected coastal region around noon.",
       time: "Issued 1 hour ago",
-      badge: "Prototype Alert"
+      badge: "Safety Advisory"
     },
     {
       id: 2,
@@ -57,7 +57,7 @@ export const safetyData = {
       title: "🌊 Sea Condition Advisory",
       message: "Sea conditions may become less favorable during the later part of the day beyond 15 NM.",
       time: "Issued 2 hours ago",
-      badge: "Prototype Alert"
+      badge: "Safety Advisory"
     },
     {
       id: 3,
@@ -67,7 +67,7 @@ export const safetyData = {
       title: "ℹ️ Pre-Departure Reminder",
       message: "Check the latest official marine safety information and boat fuel levels before departure.",
       time: "Issued 2 hours ago",
-      badge: "Prototype Reminder"
+      badge: "Safety Reminder"
     }
   ],
 

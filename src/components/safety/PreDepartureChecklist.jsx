@@ -19,15 +19,15 @@ export const PreDepartureChecklist = ({ initialItems }) => {
   };
 
   return (
-    <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 space-y-4 shadow-md">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-cyan-900/30">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-sky-500/10 border border-sky-500/30 text-cyan-400">
+          <div className="p-2.5 rounded-2xl bg-[#071F33] border border-cyan-900/40 text-cyan-400">
             <ShieldCheck className="w-6 h-6" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-slate-100">🛟 Pre-Departure Safety Checklist</h2>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <h2 className="text-xl font-bold text-white">🛟 Pre-Departure Safety Checklist</h2>
+            <p className="text-xs text-slate-300 mt-0.5">
               Complete mandatory equipment & safety checks before setting sail.
             </p>
           </div>
@@ -39,16 +39,16 @@ export const PreDepartureChecklist = ({ initialItems }) => {
       </div>
 
       {/* Progress Counter */}
-      <div className="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2">
+      <div className="p-4 rounded-2xl bg-[#071F33] border border-cyan-900/40 space-y-2">
         <div className="flex justify-between items-center text-xs">
-          <span className="font-bold text-slate-200">Checklist Progress</span>
+          <span className="font-bold text-white">Checklist Progress</span>
           <span className="font-extrabold text-cyan-300">
             {completedCount} / {items.length} Completed ({percentage}%)
           </span>
         </div>
-        <div className="w-full bg-slate-800 h-2 rounded-full overflow-hidden p-0.5 border border-slate-700">
+        <div className="w-full bg-slate-900 h-2 rounded-full overflow-hidden p-0.5 border border-cyan-900/40">
           <div
-            className="bg-gradient-to-r from-teal-500 via-cyan-400 to-sky-400 h-full rounded-full transition-all duration-300"
+            className="bg-cyan-400 h-full rounded-full transition-all duration-300"
             style={{ width: `${percentage}%` }}
           />
         </div>
@@ -60,18 +60,23 @@ export const PreDepartureChecklist = ({ initialItems }) => {
           <button
             key={item.id}
             onClick={() => toggleItem(item.id)}
-            className={`p-3.5 rounded-2xl border text-left text-xs transition-all flex items-center gap-3 cursor-pointer focus:outline-none ${
+            className={`p-3.5 rounded-2xl border text-left transition-all duration-200 flex items-start gap-3 cursor-pointer focus:outline-none ${
               item.completed
-                ? 'bg-emerald-950/20 border-emerald-500/40 text-emerald-200 font-semibold'
-                : 'bg-slate-900/80 border-slate-800 hover:border-slate-700 text-slate-300'
+                ? 'bg-emerald-500/15 border-emerald-500/40 font-medium'
+                : 'bg-[#0B253C] border-cyan-900/40 hover:border-cyan-400/50'
             }`}
           >
             {item.completed ? (
-              <CheckSquare className="w-5 h-5 text-emerald-400 shrink-0" />
+              <CheckSquare className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
             ) : (
-              <Square className="w-5 h-5 text-slate-500 shrink-0" />
+              <Square className="w-5 h-5 text-cyan-400/70 shrink-0 mt-0.5" />
             )}
-            <span className={item.completed ? 'line-through opacity-80' : ''}>{item.text}</span>
+            <div>
+              <span className={`text-xs font-bold block ${item.completed ? 'line-through text-[#E2E8F0]' : 'text-[#F8FAFC]'}`}>
+                {item.title}
+              </span>
+              <span className="text-[11px] text-[#CBD5E1] font-medium mt-0.5 block">{item.desc}</span>
+            </div>
           </button>
         ))}
       </div>

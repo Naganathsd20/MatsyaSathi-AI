@@ -5,11 +5,11 @@ export const SafetyRecommendations = ({ recommendations }) => {
   const icons = [Compass, LifeBuoy, AlertTriangle];
 
   return (
-    <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 space-y-4 shadow-md">
+      <div className="flex items-center justify-between pb-3 border-b border-cyan-900/30">
         <div>
-          <h2 className="text-xl font-bold text-slate-100">🛟 Safety Recommendations</h2>
-          <p className="text-xs text-slate-400 mt-0.5">
+          <h2 className="text-xl font-bold text-white">🛟 Safety Recommendations</h2>
+          <p className="text-xs text-slate-300 mt-0.5 font-medium">
             Operational reminders for pre-departure, voyage, and emergency protocols.
           </p>
         </div>
@@ -19,14 +19,14 @@ export const SafetyRecommendations = ({ recommendations }) => {
         {recommendations.map((rec, idx) => {
           const IconComp = icons[idx] || Compass;
           return (
-            <div key={idx} className="p-4 rounded-2xl bg-slate-900/80 border border-slate-800 space-y-2">
+            <div key={idx} className="p-4 rounded-2xl bg-[#0B253C] border border-cyan-900/40 space-y-2 shadow-md">
               <div className="flex items-center gap-2">
-                <div className="p-2 rounded-xl bg-sky-500/10 border border-sky-500/20 text-cyan-400">
+                <div className="p-2 rounded-xl bg-[#071F33] border border-cyan-900/40 text-cyan-400">
                   <IconComp className="w-4 h-4" />
                 </div>
-                <h3 className="text-xs font-bold text-slate-100 uppercase tracking-wider">{rec.stage}</h3>
+                <h3 className="text-xs font-bold text-white uppercase tracking-wider">{rec.stage}</h3>
               </div>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-slate-300 font-medium leading-relaxed">
                 "{rec.text}"
               </p>
             </div>
@@ -34,8 +34,8 @@ export const SafetyRecommendations = ({ recommendations }) => {
         })}
       </div>
 
-      <div className="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
-        <span>⚠️ These are general prototype safety reminders and do not replace official emergency guidance.</span>
+      <div className="pt-2 border-t border-cyan-900/30 text-[11px] text-slate-400 font-medium flex items-center justify-between">
+        <span>⚠️ These are general safety reminders and do not replace official emergency guidance.</span>
       </div>
     </div>
   );

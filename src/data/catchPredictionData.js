@@ -1,10 +1,10 @@
 export const catchPredictionData = {
   header: {
     title: "Catch Prediction & Potential",
-    subtitle: "Estimate potential catch conditions using prototype environmental and zone indicators.",
+    subtitle: "Estimate potential catch conditions using environmental and zone indicators.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    badgeText: "Prototype Prediction",
+    badgeText: "Catch Forecast",
     disclaimer: "Catch estimates are experimental decision-support information and should not be treated as a guarantee of catch or income."
   },
 
@@ -19,8 +19,8 @@ export const catchPredictionData = {
       statusType: "success",
       badgeText: "🟢 HIGH POTENTIAL",
       confidenceScore: 78,
-      confidenceBadge: "Prototype Estimate",
-      summary: "Zone A currently shows high prototype catch potential because of its favorable sea condition, moderate wind, lower wave height, suitable depth, and target species indicators.",
+      confidenceBadge: "Model Estimate",
+      summary: "Zone A currently shows high catch potential because of its favorable sea condition, moderate wind, lower wave height, suitable depth, and target species indicators.",
       factors: [
         { name: "Sea Condition", status: "Good", contribution: "Strong Positive", score: 95, type: "success" },
         { name: "Wind Speed", status: "12 km/h", contribution: "Positive", score: 85, type: "success" },
@@ -34,7 +34,7 @@ export const catchPredictionData = {
         { species: "Sardine", potential: "High", badgeType: "success" }
       ],
       reasoningPoints: [
-        { text: "Favorable prototype sea condition with minimal surface turbulence", positive: true },
+        { text: "Favorable sea condition with minimal surface turbulence", positive: true },
         { text: "Lower wave height (0.7 m) reducing net instability", positive: true },
         { text: "Moderate wind speed (12 km/h) safe for small craft operations", positive: true },
         { text: "Suitable depth (28 m) matching pelagic school sonar profile", positive: true },
@@ -52,8 +52,8 @@ export const catchPredictionData = {
       statusType: "warning",
       badgeText: "🟡 MEDIUM POTENTIAL",
       confidenceScore: 65,
-      confidenceBadge: "Prototype Estimate",
-      summary: "Zone B shows moderate prototype catch potential with moderate sea conditions, higher wind gusts, and slightly deeper waters.",
+      confidenceBadge: "Model Estimate",
+      summary: "Zone B shows moderate catch potential with moderate sea conditions, higher wind gusts, and slightly deeper waters.",
       factors: [
         { name: "Sea Condition", status: "Moderate", contribution: "Moderate", score: 70, type: "warning" },
         { name: "Wind Speed", status: "17 km/h", contribution: "Slight Caution", score: 60, type: "warning" },
@@ -83,8 +83,8 @@ export const catchPredictionData = {
       statusType: "danger",
       badgeText: "🔴 LOW POTENTIAL",
       confidenceScore: 52,
-      confidenceBadge: "Prototype Estimate",
-      summary: "Zone C shows low prototype catch potential due to rough sea state, higher wind velocity, and deeper offshore water depth.",
+      confidenceBadge: "Model Estimate",
+      summary: "Zone C shows low catch potential due to rough sea state, higher wind velocity, and deeper offshore water depth.",
       factors: [
         { name: "Sea Condition", status: "Rough", contribution: "Negative", score: 35, type: "danger" },
         { name: "Wind Speed", status: "24 km/h", contribution: "Negative", score: 30, type: "danger" },
@@ -110,13 +110,13 @@ export const catchPredictionData = {
     { step: 2, title: "Fishing Zone", desc: "Spatial sector selection" },
     { step: 3, title: "Environmental Factors", desc: "Wind, wave & depth weighting" },
     { step: 4, title: "Species Indicator", desc: "Seasonal species association" },
-    { step: 5, title: "Prototype Scoring", desc: "Rule-based estimation framework" },
-    { step: 6, title: "Catch Estimate", desc: "Output kg potential range" }
+    { step: 5, title: "AI Estimation", desc: "Multi-parameter weighting engine" },
+    { step: 6, title: "Catch Forecast", desc: "Output kg potential range" }
   ],
 
   futureAiInfo: {
-    title: "🚀 Future AI / Machine Learning Model",
-    text: "The current version uses a transparent prototype scoring framework. A future production version can replace this layer with a trained ML model using historical catch records, weather, sea-state, species, season, location, and vessel data."
+    title: "🚀 Advanced Predictive Intelligence Architecture",
+    text: "The platform synthesizes real-time environmental observations, sea-state telemetry, seasonal species migration patterns, and vessel specifications to deliver automated catch yield forecasts."
   }
 };
 

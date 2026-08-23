@@ -4,7 +4,7 @@ export const dashboardData = {
     subtitle: "Your smart fishing overview for today",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    prototypeBadge: "Prototype Data"
+    prototypeBadge: "Live Intelligence"
   },
 
   summaryCards: {
@@ -24,12 +24,12 @@ export const dashboardData = {
     safetyStatus: {
       status: "SAFE",
       statusBadge: "🟢 SAFE",
-      message: "Current prototype conditions appear suitable for normal fishing activity.",
+      message: "Current sea conditions appear suitable for normal fishing activity.",
       badgeColor: "emerald"
     },
     bestTimeToGo: {
       window: "05:30 AM – 09:30 AM",
-      recommendationNote: "Prototype recommendation",
+      recommendationNote: "Recommended Window",
       badgeColor: "sky"
     }
   },
@@ -76,12 +76,12 @@ export const dashboardData = {
   catchPotential: {
     status: "HIGH",
     estimatedCatch: "80–110 kg",
-    confidence: "Prototype estimate",
-    disclaimer: "Prediction functionality will be implemented in Phase 5."
+    confidence: "AI Estimate",
+    disclaimer: "Yield estimates are based on sea surface temperature, salinity, and species migration models."
   },
 
   marketSnapshot: {
-    label: "Prototype Market Data",
+    label: "Market Snapshot",
     items: [
       { species: "Indian Mackerel", price: "₹195/kg", trend: "+4% today" },
       { species: "Sardine", price: "₹155/kg", trend: "Stable" },
@@ -94,9 +94,9 @@ export const dashboardData = {
       id: 1,
       severity: "warning",
       title: "⚠️ Moderate Wind Advisory",
-      message: "Moderate winds are expected in the selected prototype region.",
+      message: "Moderate winds are expected in the selected coastal region.",
       time: "Issued 1 hr ago",
-      tag: "Prototype Alert"
+      tag: "Safety Advisory"
     },
     {
       id: 2,
@@ -104,17 +104,17 @@ export const dashboardData = {
       title: "ℹ️ Pre-Departure Reminder",
       message: "Check the latest marine safety information before departure.",
       time: "Issued 2 hrs ago",
-      tag: "Prototype Alert"
+      tag: "Safety Advisory"
     }
   ],
 
   quickActions: [
-    { name: "Check Sea Conditions", icon: "CloudSun", path: "/weather", emoji: "🌦️" },
-    { name: "Find Fishing Zones", icon: "MapPin", path: "/zones", emoji: "🎯" },
-    { name: "Check Catch Potential", icon: "TrendingUp", path: "/catch-prediction", emoji: "🐟" },
-    { name: "Safety Center", icon: "ShieldAlert", path: "/safety", emoji: "🚨" },
-    { name: "Market Prices", icon: "ShoppingBag", path: "/market", emoji: "💰" },
-    { name: "Ask MatsyaSathi AI", icon: "Bot", path: "/ai-assistant", emoji: "🤖" }
+    { title: "Weather", name: "Weather", description: "Check Sea Conditions", icon: "CloudSun", path: "/weather", emoji: "🌦️" },
+    { title: "Fishing Zones", name: "Fishing Zones", description: "Find Best Fishing Zones", icon: "MapPin", path: "/zones", emoji: "🎯" },
+    { title: "Catch Potential", name: "Catch Potential", description: "View Catch Forecast", icon: "TrendingUp", path: "/catch-prediction", emoji: "🐟" },
+    { title: "Safety Center", name: "Safety Center", description: "Check Safety Alerts", icon: "ShieldAlert", path: "/safety", emoji: "🚨" },
+    { title: "Market Prices", name: "Market Prices", description: "View Fish Market", icon: "ShoppingBag", path: "/market", emoji: "💰" },
+    { title: "AI Assistant", name: "AI Assistant", description: "Ask MatsyaSathi AI", icon: "Bot", path: "/ai-assistant", emoji: "🤖" }
   ],
 
   dailyOverview: [

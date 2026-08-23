@@ -19,15 +19,15 @@ export const VesselProfileEditor = ({ initialProfile, onSaveProfile }) => {
   };
 
   return (
-    <div className="glass-card rounded-3xl p-6 border border-sky-500/20 space-y-4">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 space-y-4 shadow-md">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3 border-b border-cyan-900/30">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+          <div className="p-2.5 rounded-2xl bg-[#071F33] border border-cyan-900/40 text-cyan-400">
             <Ship className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-slate-100">🚤 Registered Vessel & Engine Profile</h2>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <h2 className="text-xl font-bold text-white">🚤 Registered Vessel & Engine Profile</h2>
+            <p className="text-xs text-slate-300 font-medium mt-0.5">
               Manage your boat parameters to auto-populate trip planner fuel burn & capacity limits.
             </p>
           </div>
@@ -44,65 +44,65 @@ export const VesselProfileEditor = ({ initialProfile, onSaveProfile }) => {
       <form onSubmit={handleSave} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Vessel Name</label>
+            <label className="text-xs font-bold text-white">Vessel Name</label>
             <input
               type="text"
               value={profile.vesselName}
               onChange={(e) => handleChange('vesselName', e.target.value)}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-slate-100 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-bold text-white focus:outline-none focus:border-cyan-400 shadow-md"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Registration Number</label>
+            <label className="text-xs font-bold text-white">Registration Number</label>
             <input
               type="text"
               value={profile.registrationNo}
               onChange={(e) => handleChange('registrationNo', e.target.value)}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-mono text-cyan-300 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-mono font-bold text-cyan-300 focus:outline-none focus:border-cyan-400 shadow-md"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Category / Type</label>
+            <label className="text-xs font-bold text-white">Category / Type</label>
             <select
               value={profile.vesselType}
               onChange={(e) => handleChange('vesselType', e.target.value)}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-semibold text-slate-100 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-bold text-white focus:outline-none focus:border-cyan-400 shadow-md"
             >
-              <option value="Small Traditional Boat">Small Traditional Boat</option>
-              <option value="Small Motorized Boat">Small Motorized Boat</option>
-              <option value="Medium Fishing Vessel">Medium Fishing Vessel</option>
+              <option value="Small Traditional Boat" className="bg-[#051726]">Small Traditional Boat</option>
+              <option value="Small Motorized Boat" className="bg-[#051726]">Small Motorized Boat</option>
+              <option value="Medium Fishing Vessel" className="bg-[#051726]">Medium Fishing Vessel</option>
             </select>
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Engine Specs</label>
+            <label className="text-xs font-bold text-white">Engine Specs</label>
             <input
               type="text"
               value={profile.engineHp}
               onChange={(e) => handleChange('engineHp', e.target.value)}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs text-white font-medium focus:outline-none focus:border-cyan-400 shadow-md"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Fuel Tank Capacity (L)</label>
+            <label className="text-xs font-bold text-white">Fuel Tank Capacity (L)</label>
             <input
               type="number"
               value={profile.fuelCapacityL}
               onChange={(e) => handleChange('fuelCapacityL', Number(e.target.value))}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs font-bold text-amber-300 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs font-bold text-amber-300 focus:outline-none focus:border-cyan-400 shadow-md"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-xs font-semibold text-slate-300">Max Crew Capacity</label>
+            <label className="text-xs font-bold text-white">Max Crew Capacity</label>
             <input
               type="number"
               value={profile.crewCapacity}
               onChange={(e) => handleChange('crewCapacity', Number(e.target.value))}
-              className="w-full p-2.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-slate-100 focus:outline-none focus:border-cyan-400"
+              className="w-full p-2.5 rounded-xl bg-[#0B253C] border border-cyan-900/40 text-xs text-white font-medium focus:outline-none focus:border-cyan-400 shadow-md"
             />
           </div>
         </div>

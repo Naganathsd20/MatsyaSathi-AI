@@ -3,20 +3,20 @@ import { Bot, CheckCircle2, AlertTriangle, Info, Sparkles } from 'lucide-react';
 
 export const PredictionReasoning = ({ reasoningPoints, zoneName }) => {
   return (
-    <div className="glass-card rounded-3xl p-6 border border-cyan-500/30 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 space-y-4">
-      <div className="flex items-center justify-between pb-3 border-b border-slate-800/80">
+    <div className="glass-card rounded-3xl p-6 border border-cyan-900/40 bg-[#071F33] space-y-4 shadow-md">
+      <div className="flex items-center justify-between pb-3 border-b border-cyan-900/30">
         <div className="flex items-center gap-3">
-          <div className="p-2.5 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+          <div className="p-2.5 rounded-2xl bg-[#0B253C] border border-cyan-900/40 text-cyan-400">
             <Bot className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <h2 className="text-xl font-bold text-slate-100">🤖 Why this estimate?</h2>
-              <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-semibold">
-                Prototype Reasoning
+              <h2 className="text-xl font-bold text-white">🤖 Why this estimate?</h2>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-bold">
+                Model Rationale
               </span>
             </div>
-            <p className="text-xs text-slate-400 mt-0.5">
+            <p className="text-xs text-slate-300 mt-0.5">
               Transparent rule-based breakdown for {zoneName}.
             </p>
           </div>
@@ -29,8 +29,8 @@ export const PredictionReasoning = ({ reasoningPoints, zoneName }) => {
             key={idx}
             className={`p-3 rounded-2xl border text-xs flex items-start gap-2.5 ${
               pt.positive
-                ? 'bg-slate-900/80 border-slate-800 text-slate-200'
-                : 'bg-amber-950/20 border-amber-500/30 text-amber-200'
+                ? 'bg-[#0B253C] border-cyan-900/40 text-slate-200 font-medium'
+                : 'bg-[#2E1F0A]/90 border-amber-500/30 text-amber-300 font-medium'
             }`}
           >
             {pt.positive ? (
@@ -43,10 +43,10 @@ export const PredictionReasoning = ({ reasoningPoints, zoneName }) => {
         ))}
       </div>
 
-      <div className="pt-2 border-t border-slate-800/80 text-[11px] text-slate-400 flex items-center justify-between">
+      <div className="pt-2 border-t border-cyan-900/30 text-[11px] text-slate-400 font-medium flex items-center justify-between">
         <span className="flex items-center gap-1">
           <Info className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-          <span>This is prototype decision-support logic explaining the indicator weighting.</span>
+          <span>Decision-support logic explaining the indicator weighting.</span>
         </span>
       </div>
     </div>

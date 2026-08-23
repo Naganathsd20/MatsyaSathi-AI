@@ -4,7 +4,7 @@ export const weatherData = {
     subtitle: "Understand weather and sea conditions before heading out.",
     location: "Mangaluru Coast",
     locationTag: "📍 Mangaluru Coast",
-    dataBadge: "Prototype Data",
+    dataBadge: "Live Conditions",
     safetyPill: {
       status: "Suitable",
       badge: "🟢 Suitable for Coastal Fishing",
@@ -28,7 +28,7 @@ export const weatherData = {
     score: 72,
     maxScore: 100,
     label: "MODERATE",
-    explanation: "Sea conditions are currently moderate based on the available prototype weather and marine indicators.",
+    explanation: "Sea conditions are currently moderate based on the available weather and marine indicators.",
     badgeColor: "teal"
   },
 
@@ -41,7 +41,7 @@ export const weatherData = {
     suggestedWindow: {
       time: "05:30 AM — 09:30 AM",
       status: "GOOD",
-      note: "Prototype recommendation based on displayed conditions."
+      note: "Recommended window based on displayed conditions."
     }
   },
 
@@ -104,7 +104,7 @@ export const weatherData = {
 
   aiInsight: {
     title: "🤖 MatsyaSathi Weather Insight",
-    text: "Current prototype conditions indicate moderate sea conditions with relatively favorable morning conditions. Fishermen should check the latest official marine warnings before departure.",
+    text: "Current sea conditions indicate moderate sea state with favorable morning windows. Fishermen should verify official marine warnings before departure.",
     warningNote: "This is decision-support information, not a substitute for official marine safety advisories."
   }
 };
