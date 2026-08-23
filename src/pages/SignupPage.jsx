@@ -85,8 +85,8 @@ export const SignupPage = () => {
         fullName,
         mobile,
         email,
-        region,
-        harbor,
+        coastalRegion: region,
+        primaryHarbor: harbor,
         vesselName,
         password
       });
