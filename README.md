@@ -43,12 +43,15 @@ Instead of requiring users to search through multiple sources, the platform pres
 The system focuses on three major outcomes:
 
 ### 🛡️ Safety
+
 Helping fishermen understand sea conditions, weather risks and safety alerts before departure.
 
 ### 🎣 Better Fishing Decisions
+
 Helping fishermen identify suitable fishing windows and potentially productive fishing zones.
 
 ### 💰 Better Livelihood Decisions
+
 Providing catch estimates and market information to support better economic decisions.
 
 ---
@@ -454,7 +457,7 @@ MatsyaSathi-AI/
 ├── package-lock.json
 ├── vite.config.js
 └── README.md
-
+```
 
 ---
 
@@ -472,4 +475,5 @@ Built with the vision of using AI for **social impact, safety, inclusion and liv
 ---
 
 ### 🌊 MatsyaSathi AI
+
 ### Built by **Team Technosphere**
